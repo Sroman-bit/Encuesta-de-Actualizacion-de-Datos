@@ -8,6 +8,7 @@
         <form method="post" action="" name="contact-form">
             <h2>Encuesta de Actualizacion de Datos ANEIAP Uninorte</h2>
             <input type="text" name="identification" placeholder="IDENTIFICACIÓN">
+            <input type="text" name="codigo" placeholder="Codigo Estudiantil">
             <select name="document-type">
               <option value="" selected disabled>Selecciona un tipo de documento</option>
               <option value="Cedula">C.C</option>
@@ -38,7 +39,30 @@
               <option value="9no_semestre">IX</option>
               <option value="10mo_semestre">X</option>
             </select>
-            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="email" placeholder="Correo Corporativo ANEIAP">
+            <input type="text" name="ingreso" placeholder="Semestre De Ingreso a ANEIAP (20XX-X)">
+            <select name="carne">
+              <option value="" selected disabled>¿Tiene Carné?"</option>
+              <option value="si_carne">SI</option>
+              <option value="no_carne">NO</option>
+            </select>
+            <select name="carrera">
+                <option value="" selected disabled>Carrera</option>
+                <option value="industrial">ING. INDUSTRIAL</option>
+                <option value="administrativa">ING. ADMINISTRATIVA</option>
+                <option value="produccion">ING. PRODUCCIÓN</option>
+              </select>
+            <select name="tipo_sangre">
+                <option value="" selected disabled>Factor RH"</option>
+                <option value="o_negativo">O-</option>
+                <option value="o_positivo">O+</option>
+                <option value="a_negativo">A-</option>
+                <option value="a_positivo">A+</option>
+                <option value="b_negativo">B-</option>
+                <option value="b_positivo">B+</option>
+                <option value="ab_negativo">AB-</option>
+                <option value="ab_positivo">AB+</option>
+              </select>
             <input type="submit" value="Submit" id="Enviar">
         </form>
     </div>
