@@ -5,7 +5,7 @@
 </head>
 <body>
     <div class="container">
-        <form method="post" action="" name="contact-form">
+        <form method="post" action="submit-to-google-sheet" name="contact-form">
             <h2>Encuesta de Actualizacion de Datos ANEIAP Uninorte</h2>
             <input type="text" name="IDENTIFICACIÓN" placeholder="Numero de Ciudadania">
             <input type="text" name="CODIGO-ESTUDIANTIL" placeholder="Codigo Estudiantil">
@@ -68,4 +68,17 @@
         </form>
     </div>
 </body>
+
+<script>
+  const scriptURL = '<https://script.google.com/a/macros/aneiap.co/s/AKfycby5-PAZIiLZobnRA1zbkh6wZaX_BzxGUtsvzB2vCLTOfOd6ozdBBBqdhfBTDLPY1gXzmQ/exec>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 </html>
