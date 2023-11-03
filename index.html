@@ -4,13 +4,21 @@
     <title>Formulario de Actualizacion de Datos</title>
 </head>
 <style>
-
+  input[type=text]{
+  width: 100%;
+  margin: 15px 0;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 2px solid rgb(2,65,93);
+  box-sizing: border-box;
+}
  </style>
-<body style: "background-color: rgb(241,80,27)">
+<body>
 
     <div class="container">
         <form method="post" name="submit-to-google-sheet">
-            <h2>Encuesta de Actualizacion de Datos ANEIAP Uninorte</h2>
+          <div style = "padding: 40px; background-color: rgb(241,80,27) ">
+            <h2 style = "text-align: center"> Encuesta de Actualizacion de Datos ANEIAP Uninorte</h2>
             <input type="text" name="IDENTIFICACIÓN" placeholder="Numero de Ciudadania">
             <input type="text" name="CODIGO-ESTUDIANTIL" placeholder="Codigo Estudiantil">
             <select name="TIPO-DE-DOCUMENTO">
